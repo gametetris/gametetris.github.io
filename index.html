@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Tetris Game</title>
+    <style>
+        body {
+            background-image: url('./background tetris.jpg'); /* Ganti dengan path gambar yang sesuai */
+            background-repeat: no-repeat; /* Gambar tidak diulang */
+            background-size: cover; /* Mengatur gambar agar menutupi seluruh latar belakang */
+            background-position: center; /* Memusatkan gambar */
+            margin: 0; /* Menghilangkan margin default */
+            height: 100vh; /* Mengatur tinggi body agar memenuhi viewport */
+            flex-direction: column;
+        }
+
+        .game_board_wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 105%; /* Pastikan wrap mengisi seluruh tinggi body */
+        }
+
+        /* Kelas untuk kursor tangan */
+        .cursor-pointer {
+            cursor: pointer; /* Mengubah kursor menjadi tangan */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="start-button" class="wrapper-start">
+            <button onclick="startGame()" class="cursor-pointer" style="color: rgb(255, 255, 255); background-color: transparent; font-size: 30px; box-shadow: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-weight: bold; border: none;">START GAME</button>
+        </div>
+    </div>
+    <div id="tetris-container" class="hide-tetris">
+        <div class="game_board_wrap">
+            <img src="./image/logo_Transparent.png" alt="Logo" class="logo">
+            <div class="wrapper-restart">
+                <button onclick="window.location.reload()" class="cursor-pointer" style="color: rgb(0, 0, 0); font-weight: bold; background-color: transparent; font-family: Arial, Helvetica, sans-serif; border: none;">RESTART GAME</button>
+            </div> 
+            <div class="wrapper-score">
+                <span style="color: rgb(255, 255, 255); text-transform: uppercase; font-weight: bold;">score:&nbsp; </span><span id="score"></span>
+            </div>
+            <div id="z-container" style="position: absolute; left: 100px; top: 50px; color: rgb(5, 4, 4); font-size: 20px; font-weight: bold; background: linear-gradient(rgb(0, 255, 174), rgb(0, 242, 255)); width: 200px; border-radius: 150px; text-align: center; margin: 250px;">
+                Tombol Z untuk mengubah balok <span id="z-display"></span>
+            </div>
+            <div id="game_board"></div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>

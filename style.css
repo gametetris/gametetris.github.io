@@ -1,0 +1,103 @@
+body {
+  overflow: hidden;
+  background: linear-gradient(0deg, #3005ee 0%, #02d6f1 100%);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex; /* Menggunakan block untuk elemen gambar */
+  margin: 5px auto; /* Margin atas 20px, margin bawah 0, dan margin kiri/kanan otomatis untuk memusatkan */
+  margin-bottom: 10px;
+  width: 150px; /* Lebar logo */
+  height: 75px; /* Tinggi otomatis untuk menjaga proporsi gambar */
+  max-height: 50px; /* Batas maksimum tinggi logo */
+  object-fit: 25px; /* Menjaga proporsi gambar jika ukuran tidak sesuai */ 
+}
+
+#game_board {
+  width: 241px;
+  height: 482px;
+  border: 4px solid #000000;
+  margin: 0 auto;
+  position: relative;
+  background: repeating-linear-gradient(rgba(22, 28, 67, 0.8), rgba(22, 28, 67, 0.8) 20px, rgba(23, 27, 63, 0.8) 20px, rgba(23, 27, 63, 0.8) 40px), repeating-linear-gradient(90deg, rgba(22, 28, 67, 0.8), rgba(
+          22,
+          28,
+          67,
+          0.8
+        ) 20px, rgba(23, 27, 63, 0.8) 20px, rgba(23, 27, 63, 0.8) 40px);
+  box-shadow: 0 6px 16px rgba(106, 255, 0, 0.6);
+  
+}
+
+.block {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(0, 0, 0);
+  position: absolute;
+  box-shadow: inset 3px 3px 0 rgba(0, 61, 80, 0.5);
+}
+
+.ghost {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(0, 64, 255);
+  position: absolute;
+  box-shadow: inset 3px 3px 0 rgba(9, 1, 25, 0.3);
+}
+
+#score {
+margin-top: 10px; /* Jarak tetap di atas skor */
+color: rgb(255, 255, 255);
+font-size: 24px;
+
+}
+
+.wrapper-score {
+width: 150px;
+font-size: 24px;
+text-align: center;
+border: 2px solid transparent;
+background : linear-gradient(rgb(81, 0, 255),rgb(0, 170, 255));
+padding: 0.5rem;
+margin-bottom: 10px;
+border-radius: 15%;
+font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.wrapper-restart {
+text-align: center;
+width: 150px;
+border: 2px solid transparent;
+background : linear-gradient(rgb(255, 0, 0),rgb(179, 219, 34));
+padding: 0.5rem;
+margin-bottom: 10px;
+border-radius: 15%;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.show-tetris {
+display: block;
+}
+
+.hide-tetris {
+display: none;
+}
+
+.wrapper-start {
+text-align: center;
+width: 150px;
+border: 2px solid transparent;
+background: linear-gradient(rgb(0, 0, 0),rgb(1, 180, 245));
+padding: 20px;
+margin-bottom: 10px;
+border-radius: 15%;
+font-family:Arial, Helvetica, sans-serif;
+}
